@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class DivisibilityTest {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        for (int i = 0; i < 10; i++) {
+            boolean isDivisible = number % i == 0;
+            String reason = "";
+            if (number % 10 == i) {
+                reason = "because it ends with a " + i;
+            }
+
+            if (isDivisible) {
+                System.out.println("The number is divisible by " + i + " " + reason);
+            }
+        }
+    }
+}
